@@ -7,7 +7,7 @@ API_url = "http://ip-api.com/json/"
 input_file="ips.txt"
 output_file="ip_info.csv"
 fields=["status","country","countryCode", "region", "regionName", "city", "zip", "lat", "lon", "timezone", "isp", "org", "as", "query"]
-m = folium.Map((0.0,0.0),tiles='https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',attr='Dark Map')
+
 
 def get_info(ip):
     response = requests.get(API_url+ip)
@@ -19,6 +19,7 @@ def get_info(ip):
 
 
 def main(input_file,user_id):
+    m = folium.Map((69.0,69.0),tiles='https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',attr='Dark Map')
     base_dir="downloads"   
     user_dir=os.path.join(base_dir,user_id)
     os.makedirs(user_dir, exist_ok=True)
@@ -52,7 +53,7 @@ def main(input_file,user_id):
                         tooltip=coord,
                         popup=coordinates[coord][0],
                         icon=folium.Icon(icon="cloud")).add_to(m)
-        m.save(f"{user_dir}/map.html")
+        m.save(os.path.join(user_dir, "map.html"))
     
 if __name__ == "__main__":
     if len(sys.argv) != 3:
