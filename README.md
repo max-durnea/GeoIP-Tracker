@@ -8,3 +8,6 @@ geoip_web_server/
 └── README.md
 
 you need to have folium installed pip install folium
+# To DO:
+1. Implement HTTP Server
+2. Make the map open at the location from where the user accessed the website

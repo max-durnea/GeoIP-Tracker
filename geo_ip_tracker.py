@@ -6,7 +6,7 @@ API_url = "http://ip-api.com/json/"
 input_file="ips.txt"
 output_file="ip_info.csv"
 fields=["status","country","countryCode", "region", "regionName", "city", "zip", "lat", "lon", "timezone", "isp", "org", "as", "query"]
-
+m = folium.Map((0.0,0.0),tiles='https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',attr='Dark Map')
 def get_info(ip):
     response = requests.get(API_url+ip)
     if(response.status_code==200):
@@ -34,11 +34,18 @@ with open(input_file,'r') as f, open(output_file,'w',newline='') as csvfile:
             failed_checks.append(ip)
             continue
         json_data.append(info)
-        coordinates[ip]={info["org"],float(info["lat"]), float(info["lon"])}
+        coordinates[ip]=[info["org"],[float(info["lat"]), float(info["lon"])]]
     writer.writerows(json_data)
     '''for coord in coordinates:
         print(coord+": "+str(coordinates[coord]))'''
-    #Generat
+    #Generate the html page with marked cities
+    for coord in coordinates:
+        folium.Marker(location=coordinates[coord][1],
+                      tooltip=coord,
+                      popup=coordinates[coord][0],
+                      icon=folium.Icon(icon="cloud")).add_to(m)
+    m.save("map.html")
+    
     
         
         

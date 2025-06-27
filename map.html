@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_0584bfefc49007e60c85da090a7d0dc5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_0584bfefc49007e60c85da090a7d0dc5" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_0584bfefc49007e60c85da090a7d0dc5 = L.map(
+                "map_0584bfefc49007e60c85da090a7d0dc5",
+                {
+                    center: [0.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_9b0ab8f398886e7f1212c94aec43f146 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Dark Map",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_9b0ab8f398886e7f1212c94aec43f146.addTo(map_0584bfefc49007e60c85da090a7d0dc5);
+        
+    
+            var marker_01a89a6a73095019ced51c713c5fe927 = L.marker(
+                [39.03, -77.5],
+                {
+}
+            ).addTo(map_0584bfefc49007e60c85da090a7d0dc5);
+        
+    
+            var icon_0a76fbce81f6484d9af7d0a46e79650a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e58bba6f8080405701abd9824a771c10 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_89f1bf4b0c13db3f608e767a9b8c5e08 = $(`<div id="html_89f1bf4b0c13db3f608e767a9b8c5e08" style="width: 100.0%; height: 100.0%;">Google Public DNS</div>`)[0];
+                popup_e58bba6f8080405701abd9824a771c10.setContent(html_89f1bf4b0c13db3f608e767a9b8c5e08);
+            
+        
+
+        marker_01a89a6a73095019ced51c713c5fe927.bindPopup(popup_e58bba6f8080405701abd9824a771c10)
+        ;
+
+        
+    
+    
+            marker_01a89a6a73095019ced51c713c5fe927.bindTooltip(
+                `<div>
+                     8.8.8.8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_01a89a6a73095019ced51c713c5fe927.setIcon(icon_0a76fbce81f6484d9af7d0a46e79650a);
+            
+    
+            var marker_6593cedd4f35a76791d6a70c6df27da9 = L.marker(
+                [-27.4766, 153.0166],
+                {
+}
+            ).addTo(map_0584bfefc49007e60c85da090a7d0dc5);
+        
+    
+            var icon_5666ea7f19ddfc080e7d63b801abdb5a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1b7d2a69e0a967fd6e29c6e512cdcad5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_88858ac3f96ef49832bd94fe36dc6171 = $(`<div id="html_88858ac3f96ef49832bd94fe36dc6171" style="width: 100.0%; height: 100.0%;">APNIC and Cloudflare DNS Resolver project</div>`)[0];
+                popup_1b7d2a69e0a967fd6e29c6e512cdcad5.setContent(html_88858ac3f96ef49832bd94fe36dc6171);
+            
+        
+
+        marker_6593cedd4f35a76791d6a70c6df27da9.bindPopup(popup_1b7d2a69e0a967fd6e29c6e512cdcad5)
+        ;
+
+        
+    
+    
+            marker_6593cedd4f35a76791d6a70c6df27da9.bindTooltip(
+                `<div>
+                     1.1.1.1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6593cedd4f35a76791d6a70c6df27da9.setIcon(icon_5666ea7f19ddfc080e7d63b801abdb5a);
+            
+    
+            var marker_fcc836a13207513cbb10172df4a5ffce = L.marker(
+                [37.7642, -122.3993],
+                {
+}
+            ).addTo(map_0584bfefc49007e60c85da090a7d0dc5);
+        
+    
+            var icon_cdd7201baffe7820ebc0fea6ad0adce5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4ac7bf359d4da84d9363a2b3b50bc709 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c7fec9a89aa0fe984c5bdbdbcc5bd050 = $(`<div id="html_c7fec9a89aa0fe984c5bdbdbcc5bd050" style="width: 100.0%; height: 100.0%;">Cisco OpenDNS, LLC</div>`)[0];
+                popup_4ac7bf359d4da84d9363a2b3b50bc709.setContent(html_c7fec9a89aa0fe984c5bdbdbcc5bd050);
+            
+        
+
+        marker_fcc836a13207513cbb10172df4a5ffce.bindPopup(popup_4ac7bf359d4da84d9363a2b3b50bc709)
+        ;
+
+        
+    
+    
+            marker_fcc836a13207513cbb10172df4a5ffce.bindTooltip(
+                `<div>
+                     208.67.222.222
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fcc836a13207513cbb10172df4a5ffce.setIcon(icon_cdd7201baffe7820ebc0fea6ad0adce5);
+            
+    
+            var marker_dc678e2bda1b76ed2550b3a91b31230d = L.marker(
+                [37.8767, -122.2676],
+                {
+}
+            ).addTo(map_0584bfefc49007e60c85da090a7d0dc5);
+        
+    
+            var icon_b924287f1dc6706213da383f8a68bf30 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1fa5496a1ec919736399ea8bde8ce4e6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b2d81524fac9e34be8649ab5dd0e9c4d = $(`<div id="html_b2d81524fac9e34be8649ab5dd0e9c4d" style="width: 100.0%; height: 100.0%;">Quad9</div>`)[0];
+                popup_1fa5496a1ec919736399ea8bde8ce4e6.setContent(html_b2d81524fac9e34be8649ab5dd0e9c4d);
+            
+        
+
+        marker_dc678e2bda1b76ed2550b3a91b31230d.bindPopup(popup_1fa5496a1ec919736399ea8bde8ce4e6)
+        ;
+
+        
+    
+    
+            marker_dc678e2bda1b76ed2550b3a91b31230d.bindTooltip(
+                `<div>
+                     9.9.9.9
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dc678e2bda1b76ed2550b3a91b31230d.setIcon(icon_b924287f1dc6706213da383f8a68bf30);
+            
+    
+            var marker_09b6a0ab3fe34cd6279a69462873d6c9 = L.marker(
+                [37.7823, -122.391],
+                {
+}
+            ).addTo(map_0584bfefc49007e60c85da090a7d0dc5);
+        
+    
+            var icon_c65aba4ba198322d3752368ba87e2860 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c869afa8084a482aa347c261d8753681 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f28c5e112563dd411a018a29ea088bdd = $(`<div id="html_f28c5e112563dd411a018a29ea088bdd" style="width: 100.0%; height: 100.0%;">GitHub, Inc</div>`)[0];
+                popup_c869afa8084a482aa347c261d8753681.setContent(html_f28c5e112563dd411a018a29ea088bdd);
+            
+        
+
+        marker_09b6a0ab3fe34cd6279a69462873d6c9.bindPopup(popup_c869afa8084a482aa347c261d8753681)
+        ;
+
+        
+    
+    
+            marker_09b6a0ab3fe34cd6279a69462873d6c9.bindTooltip(
+                `<div>
+                     185.199.108.153
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_09b6a0ab3fe34cd6279a69462873d6c9.setIcon(icon_c65aba4ba198322d3752368ba87e2860);
+            
+    
+            var marker_e15b1d52cf96b2c554db4a32abb9fac9 = L.marker(
+                [39.7392, -104.99],
+                {
+}
+            ).addTo(map_0584bfefc49007e60c85da090a7d0dc5);
+        
+    
+            var icon_83f59b4498e942a8f7b0b22c0a338a72 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a564aab43148aaa1f5b6a60e43a471bf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0f46aaa09d4f331e3f27b4540cffbe49 = $(`<div id="html_0f46aaa09d4f331e3f27b4540cffbe49" style="width: 100.0%; height: 100.0%;">Google LLC</div>`)[0];
+                popup_a564aab43148aaa1f5b6a60e43a471bf.setContent(html_0f46aaa09d4f331e3f27b4540cffbe49);
+            
+        
+
+        marker_e15b1d52cf96b2c554db4a32abb9fac9.bindPopup(popup_a564aab43148aaa1f5b6a60e43a471bf)
+        ;
+
+        
+    
+    
+            marker_e15b1d52cf96b2c554db4a32abb9fac9.bindTooltip(
+                `<div>
+                     142.250.72.14
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e15b1d52cf96b2c554db4a32abb9fac9.setIcon(icon_83f59b4498e942a8f7b0b22c0a338a72);
+            
+    
+            var marker_e7271322dee0625233dc977c015a834a = L.marker(
+                [37.7642, -122.3993],
+                {
+}
+            ).addTo(map_0584bfefc49007e60c85da090a7d0dc5);
+        
+    
+            var icon_df472618e5e21fe16f7f46fb122449cf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_35c8a83b7893ac43c7888126d5fd345e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9f5f0d9717b8f057c55aa7bf7534bb05 = $(`<div id="html_9f5f0d9717b8f057c55aa7bf7534bb05" style="width: 100.0%; height: 100.0%;">Fastly, Inc.</div>`)[0];
+                popup_35c8a83b7893ac43c7888126d5fd345e.setContent(html_9f5f0d9717b8f057c55aa7bf7534bb05);
+            
+        
+
+        marker_e7271322dee0625233dc977c015a834a.bindPopup(popup_35c8a83b7893ac43c7888126d5fd345e)
+        ;
+
+        
+    
+    
+            marker_e7271322dee0625233dc977c015a834a.bindTooltip(
+                `<div>
+                     151.101.1.69
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e7271322dee0625233dc977c015a834a.setIcon(icon_df472618e5e21fe16f7f46fb122449cf);
+            
+    
+            var marker_1168a69aac2a805dc2ccc4d3815fdda9 = L.marker(
+                [37.7766, -122.417],
+                {
+}
+            ).addTo(map_0584bfefc49007e60c85da090a7d0dc5);
+        
+    
+            var icon_ecf6adb2f6eeb0b95c14c2a9a544af01 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0f0631067e5520c2c5f2af8bdcae3894 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7d5d785904ec0c4d8a2f57f63fbf14c2 = $(`<div id="html_7d5d785904ec0c4d8a2f57f63fbf14c2" style="width: 100.0%; height: 100.0%;">Twitter Inc</div>`)[0];
+                popup_0f0631067e5520c2c5f2af8bdcae3894.setContent(html_7d5d785904ec0c4d8a2f57f63fbf14c2);
+            
+        
+
+        marker_1168a69aac2a805dc2ccc4d3815fdda9.bindPopup(popup_0f0631067e5520c2c5f2af8bdcae3894)
+        ;
+
+        
+    
+    
+            marker_1168a69aac2a805dc2ccc4d3815fdda9.bindTooltip(
+                `<div>
+                     104.244.42.1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1168a69aac2a805dc2ccc4d3815fdda9.setIcon(icon_ecf6adb2f6eeb0b95c14c2a9a544af01);
+            
+    
+            var marker_689607e3dd3e36a2884665fe40da1915 = L.marker(
+                [37.4043, -122.0748],
+                {
+}
+            ).addTo(map_0584bfefc49007e60c85da090a7d0dc5);
+        
+    
+            var icon_55ecf09e724402f0844d884c6c6b850d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d3db82fb6aa64a4b83427c3bb797d691 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_28c253089ab88a8073c32e6cf3f2fa8e = $(`<div id="html_28c253089ab88a8073c32e6cf3f2fa8e" style="width: 100.0%; height: 100.0%;">Google LLC</div>`)[0];
+                popup_d3db82fb6aa64a4b83427c3bb797d691.setContent(html_28c253089ab88a8073c32e6cf3f2fa8e);
+            
+        
+
+        marker_689607e3dd3e36a2884665fe40da1915.bindPopup(popup_d3db82fb6aa64a4b83427c3bb797d691)
+        ;
+
+        
+    
+    
+            marker_689607e3dd3e36a2884665fe40da1915.bindTooltip(
+                `<div>
+                     216.58.214.238
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_689607e3dd3e36a2884665fe40da1915.setIcon(icon_55ecf09e724402f0844d884c6c6b850d);
+            
+    
+            var marker_195214358f45849303d01f63edfcaad6 = L.marker(
+                [39.0438, -77.4874],
+                {
+}
+            ).addTo(map_0584bfefc49007e60c85da090a7d0dc5);
+        
+    
+            var icon_a9f85a712e1189367075bfb7b52a7345 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "cloud",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_69b0367750c54146e095c07d1fc1f22c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_47155a9b8c2a0f3d7ce8ea76187efba5 = $(`<div id="html_47155a9b8c2a0f3d7ce8ea76187efba5" style="width: 100.0%; height: 100.0%;">AWS CloudFront (GLOBAL)</div>`)[0];
+                popup_69b0367750c54146e095c07d1fc1f22c.setContent(html_47155a9b8c2a0f3d7ce8ea76187efba5);
+            
+        
+
+        marker_195214358f45849303d01f63edfcaad6.bindPopup(popup_69b0367750c54146e095c07d1fc1f22c)
+        ;
+
+        
+    
+    
+            marker_195214358f45849303d01f63edfcaad6.bindTooltip(
+                `<div>
+                     13.224.0.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_195214358f45849303d01f63edfcaad6.setIcon(icon_a9f85a712e1189367075bfb7b52a7345);
+            
+</script>
+</html>
