@@ -1,6 +1,7 @@
 from http.server import HTTPServer, BaseHTTPRequestHandler
 import urllib.parse
 import os
+import subprocess
 
 class MyHandler(BaseHTTPRequestHandler):
     def do_GET(self):
@@ -30,8 +31,7 @@ class MyHandler(BaseHTTPRequestHandler):
         self.send_header('Content-type', 'text/plain')
         self.send_header('Set-Cookie', f'session_id={session_id}; Path=/; HttpOnly')
         self.end_headers()
-        self.wfile.write(b"Received IPs:\n")
-        self.wfile.write(f"{ip_list_raw}".encode())
+        
         #use ip_list to create a separate folder for each user
         ip_list=ip_list_raw.splitlines()
         base_dir = 'users'
@@ -42,8 +42,12 @@ class MyHandler(BaseHTTPRequestHandler):
         with open(ips_file_path, 'w') as f:
             for ip in ip_list:
                 f.write(ip + '\n')
-
         print(ip_list)
+        subprocess.run(
+            ["python3", "geo_ip_tracker.py", ips_file_path, session_id],
+            capture_output=True,
+            text=True
+        )
     def get_session_id(self):
         cookie_header = self.headers.get('Cookie')
         session_id = None
