@@ -10,7 +10,7 @@ A lightweight web-based tool that takes a list of IP addresses and returns geolo
 * Exports results to CSV
 * Generates an interactive map with markers for each IP
 * Serves generated files for download
-
+![App Screenshot](image.png)
 ## Directory Structure
 
 ```
